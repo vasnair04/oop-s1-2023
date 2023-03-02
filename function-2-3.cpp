@@ -6,10 +6,11 @@ void two_five_nine(int array[], int n) {
   int nines = 0;
   int counter = 0;
   if (n<1) {
-    return twos,fives,nines;
+    printf("2:%d\n5:%d\n9:%d\n",twos,fives,nines);
+    return;
   } else {
     while (counter!=n) {
-      switch () {
+      switch (array[counter]) {
         case 2:
           counter++;
           twos++;
@@ -23,9 +24,10 @@ void two_five_nine(int array[], int n) {
           nines++;
           break;
         default:
-        counter++
+        counter++;
       }
     }
   }
-  return twos,fives,nines;
+  printf("2:%d\n5:%d\n9:%d\n",twos,fives,nines);
+  return;
 }
