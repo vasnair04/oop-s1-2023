@@ -28,6 +28,6 @@ void two_five_nine(int array[], int n) {
       }
     }
   }
-  printf("2:%d\n5:%d\n9:%d\n",twos,fives,nines);
+  printf("2:%d;5:%d;9:%d;\n",twos,fives,nines);
   return;
 }
