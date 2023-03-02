@@ -14,8 +14,8 @@ int median_array(int array[], int n) {
     }
   }
   // finds median 
-  if (n%2==0) {
-    return ((array[n/2]+array[(n/2)+1])/2);
+  if (n%2==0||n<1) {
+    return 0;
   } else {
     return (array[(n/2)+(1/2)]);
   }
