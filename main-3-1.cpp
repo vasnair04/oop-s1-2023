@@ -3,8 +3,8 @@
 extern bool is_fanarray(int array[], int n);
 
 int main() { 
-  int array[6] = {1,2,3,3,2,1};
-  int n = 6;
+  int array[4] = {1,2,2,1};
+  int n = 0;
   if (is_fanarray(array, n) == 0) {
    std::cout << "False" << std::endl;
   } else {

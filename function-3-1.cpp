@@ -4,10 +4,11 @@ bool is_fanarray(int array[], int n) {
   int front = 0;
   int back = n-1;
   int even_check = 0;
-  int status = 1;
+  int status = 0;
   if (n<1) {
-    return 0;
+    return status;
   }
+  status = 1;
   if (n%2==0) {
     even_check = 1;
   } 
