@@ -1,9 +1,11 @@
 #include <iostream>
 
-extern int array_sum(int array[], int n);
+extern int sum_diagonal(int array[4][4]);
+
+using namespace std;
 
 int main() {
-    int array[5] = {4,5,6,7,8};
-    std::cout << array_sum(array, 5) << std::endl;
-    return 0;
+  int array[4][4] = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+  cout << sum_diagonal(array) << endl;
+  return 0;
 }

@@ -1,18 +1,27 @@
 #include <iostream>
 
-double array_mean(int array[], int n) {
-  double array_mean = 0;
-  double sum = 0;
-  double count = n;
-  if (n<1) {
-    array_mean = 0.0;
-    return array_mean;
-  } 
-  else {
-      for (int i=0;i<n;i++) {
-    sum = sum + array[i];
+int is_identity(int array[10][10]) {
+  int status = 0;
+  int points = 0;
+  int real = 0;
+  for (int row=0;row<10;row++) {
+    for (int col=0;col<10;col++) {
+      if (col==row) {
+        real++;
+        if (array[row][col]==1){
+          points++;
+        } else {
+          points--;
+        } 
+      } else {
+        if (array[row][col]!=0) {
+          points--;
+        }
+      }
+    }
   }
-  array_mean = sum/count;
-  return array_mean;
+  if (points==real) {
+    status = 1;
   }
+  return status;
 }

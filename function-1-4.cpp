@@ -1,9 +1,18 @@
 #include <iostream>
 
-int sum_two_arrays(int array[], int secondarray[], int n) {
-  int sum_two_arrays = 0;
-  for (int i=0;i<n;i++) {
-    sum_two_arrays = sum_two_arrays + array[i] + secondarray[i];
+using namespace std;
+
+void print_scaled(int array[3][3], int scale) {
+  for (int i=0;i<3;i++) {
+    for (int j=0;j<3;j++) {
+      array[i][j] = array[i][j]*scale;
+    }
   }
-  return sum_two_arrays;
+  for (int i=0;i<3;i++) {
+    for (int j=0;j<3;j++) {
+      printf("%d ",array[i][j]);
+    }
+    printf("\n");
+  }
+  return;
 }

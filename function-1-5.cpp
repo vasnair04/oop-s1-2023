@@ -1,15 +1,17 @@
 #include <iostream>
 
-int count_evens(int number) {
-  int count_evens = 0;
-  if (number<1) {
-    return 0;
-  }
-  for (int i=0;i<number;i++) {
-    if (i%2==0) {
-      count_evens++;
+void print_summed(int array1[3][3],int array2[3][3]) {
+  int array3[3][3] = {0};
+  for (int i=0;i<3;i++) {
+    for (int j=0;j<3;j++) {
+      array3[i][j] = array1[i][j] + array2[i][j];
     }
   }
-
-  return count_evens;
+  for (int i=0;i<3;i++) {
+    for (int j=0;j<3;j++) {
+      printf("%d ",array3[i][j]);
+    }
+    printf("\n");
+  }
+  return;
 }

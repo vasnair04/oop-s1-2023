@@ -1,11 +1,11 @@
 #include <iostream>
 
-extern int num_count(int array[], int n, int number);
+using namespace std;
 
-int main() {
-    int array[5] = {4,5,5,7,9};
-    int number = 5;
-    int n = 5;
-    std::cout << num_count(array, n, number) << std::endl;
-    return 0;
+extern void count_digits(int array[4][4]);
+
+int main(){
+  int array[4][4] = {{1,2,3,4},{5,6,7,8},{9,1,2,3},{4,5,6,7}};
+  count_digits(array);
+  return 0;
 }

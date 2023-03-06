@@ -1,11 +1,9 @@
 #include <iostream>
 
-extern int sum_two_arrays(int array[], int secondarray[], int n);
+extern void print_scaled(int array[3][3],int scale);
 
-int main() {
-    int array[5] = {4,5,5,7,9};
-    int secondarray[5] = {4,5,5,7,9};
-    int n = 5;
-    std::cout << sum_two_arrays(array, secondarray, n) << std::endl;
-    return 0;
+int main(){
+  int scale = 3 ;
+  int threebythree[3][3] = {{0,1,2},{3,4,5},{6,7,8}} ;
+  print_scaled(threebythree,scale) ;
 }
