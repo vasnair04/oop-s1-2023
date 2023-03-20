@@ -69,8 +69,10 @@ void hexDigits(int *numbers,int length) {
         break;
       case 15:
         hex[0] = 'F';
+        break;
       default:
         hex[0] = ' ';
+        break;
     }
     cout << i << " " << numbers[i] << " " << hex << endl;
   }
