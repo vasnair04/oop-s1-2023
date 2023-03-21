@@ -3,7 +3,7 @@
 
 PersonList createPersonList(int n) {
   PersonList persons;
-  person ppl[n];
+  person* ppl = new person[n];
   persons.people = ppl;
   persons.numPeople = n;
   for (int i=0;i<n;i++) {

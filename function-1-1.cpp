@@ -2,11 +2,11 @@
 #include "Person.h"
 
 person* createPersonArray(int n) {
-  person people[n];
+  person* ppl = new person[n];
   for (int i=0;i<n;i++) {
-    people[i].age = 0;
-    people[i].name = "John Doe";
+    ppl[i].age = 0;
+    ppl[i].name = "John Doe";
   }
-  return people;
+  return ppl;
 }
 
