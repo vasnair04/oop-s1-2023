@@ -1,13 +1,13 @@
-#ifndef Person
-#define Person
+#ifndef person
+#define person
 
-struct person {
+struct Person {
   std::string name;
   int age;
 };
 
 struct PersonList {
-    person* people;
+    Person* people;
     int numPeople;
 };
 

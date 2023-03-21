@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Person.h"
+#include "person.h"
 
-person* createPersonArray(int n) {
-  person* ppl = new person[n];
+Person* createPersonArray(int n) {
+  Person* ppl = new Person[n];
   for (int i=0;i<n;i++) {
     ppl[i].age = 0;
     ppl[i].name = "John Doe";

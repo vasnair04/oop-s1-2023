@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Person.h"
+#include "person.h"
 
-extern person* createPersonArray(int n);
+extern Person* createPersonArray(int n);
 
 int main() {
   int n = 4;
