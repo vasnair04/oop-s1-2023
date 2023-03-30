@@ -1,12 +1,15 @@
 #include <iostream>
-#include "Musician.h"
+#include "Unit.h"
 
-int main() {
-Musician m1;
-std::cout << "Default instrument: " << m1.get_instrument() << " , Default experience: " << m1.get_experience() << std::endl;
-Musician m2("guitar", 5);
-std::cout << "Instrument: " << m2.get_instrument() << ", Experience: " <<
-m2.get_experience() << std::endl;
+using namespace std;
 
-return 0;
+int main(){
+  Unit u1;
+  Unit u2(12000,3,400.00);
+
+  cout << "unit values are:" << u1.get_value() << " " << u1.get_num_bedrooms() << " "
+  << u1.get_area() << endl;
+
+  cout << "unit values are:" << u2.get_value() << " " << u2.get_num_bedrooms() << " "
+  << u2.get_area() << endl;
 }
