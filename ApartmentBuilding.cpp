@@ -15,13 +15,7 @@ int ApartmentBuilding::get_capacity() {
 }
 
 int ApartmentBuilding::get_current_number_of_units(){
-  int count = 0;
-  for (int i = 0; i<max; i++){
-    if (units[i].get_area()!=-1) {
-      count++;
-    }
-  }
-  return count;
+return count[0];
 }
 
 Unit* ApartmentBuilding::get_contents(){
@@ -33,10 +27,12 @@ bool ApartmentBuilding::add_unit(Unit unit){
     return 0;
   } else {
     units[get_current_number_of_units()] = unit;
+    count[0]++;
     return 1;
   }
 }
 
 ApartmentBuilding::~ApartmentBuilding(){
   delete [] units;
+  delete [] count;
 }

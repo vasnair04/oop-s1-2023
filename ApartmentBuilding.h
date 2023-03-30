@@ -6,6 +6,7 @@
 class ApartmentBuilding
 {
   private:
+  int* count = new int[1];
   Unit *units;
   int max;
   public:

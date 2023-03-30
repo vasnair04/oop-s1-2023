@@ -3,7 +3,7 @@
 Unit::Unit() {
   val = 0;
   numBed = 0;
-  area = -1;
+  area = 0;
 }
 
 Unit::Unit(int unit_val, int num_beds, double unit_size){
@@ -17,7 +17,7 @@ Unit::Unit(int unit_val, int num_beds, double unit_size){
   }
   area = unit_size;
   if (unit_size<0) {
-    unit_size = 0;
+    area = 0;
   }
 }
 
