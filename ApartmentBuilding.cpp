@@ -17,7 +17,7 @@ int ApartmentBuilding::get_capacity() {
 int ApartmentBuilding::get_current_number_of_units(){
   int count = 0;
   for (int i = 0; i<max; i++){
-    if (units[i].get_area()!=0) {
+    if (units[i].get_area()!=-1) {
       count++;
     }
   }
