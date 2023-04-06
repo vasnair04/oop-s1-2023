@@ -17,6 +17,7 @@ int ParkingLot::getCount(){
 
 void ParkingLot::parkVehicle(Vehicle* parking){
   vehicles[getCount()] = parking[0];
+  counter[0]++;
 }
 
 void ParkingLot::unparkVehicle(int ID){
@@ -26,9 +27,10 @@ void ParkingLot::unparkVehicle(int ID){
   while (count2<max&&status==0){
     if (vehicles[count2].get_ID()==ID) {
       vehicles[count2] = 0;
-      counter--;
+      counter[0]--;
       status = 1;
     }
+    count2++;
   }
   if (status==0){    
     cout << "Vehicle not in the lot" << endl;

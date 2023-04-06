@@ -8,11 +8,11 @@
 using namespace std;
 
 int main(){
-  ParkingLot carpark(10);
+  ParkingLot carpark(3);
   string* current = new string[1];
-  string* type = new string[10];
+  string* type = new string[3];
   int ID = 0;
-  for (int i=0;i<10;i++) {
+  for (int i=0;i<3;i++) {
     cout << "What vehicle would you like to park?" << endl;
     cin >> current[0];
     cout << "What is the id of this vehicle?" << endl;
@@ -24,7 +24,7 @@ int main(){
     } else if(current[0]=="Bus") {
       Vehicle vehicle = Bus(ID);
       carpark.parkVehicle(&vehicle) ;
-      type[i] = "bus";
+      type[i] = "Bus";
     } else if(current[0]=="Motorbike") {
       Vehicle vehicle = Motorbike(ID);
       carpark.parkVehicle(&vehicle) ;
