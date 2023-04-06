@@ -7,7 +7,7 @@ Vehicle::Vehicle() {
 }
 
 Vehicle::Vehicle(int ID): ID(ID) {
-  timeOfEntry = time(0);
+  timeOfEntry = time(NULL);
 }
 
 int Vehicle::get_ID(){
