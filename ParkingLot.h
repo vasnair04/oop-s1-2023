@@ -12,13 +12,14 @@ class ParkingLot {
   int maxduration;
   public:
   int* counter = new int[1];
+  counter[0] = 0;
   ParkingLot();
   ParkingLot(int max);
   int getCount();
   void parkVehicle(Vehicle* parking);
   void unparkVehicle(int ID); 
   void maxParkingDuration(int seconds);
-  int countOverstayingVehicles(int maxduration2);
+  int countOverstayingVehicles(int maxParkingDuration);
   ~ParkingLot();
 };
 
