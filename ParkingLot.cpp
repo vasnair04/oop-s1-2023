@@ -16,8 +16,12 @@ int ParkingLot::getCount(){
 }
 
 void ParkingLot::parkVehicle(Vehicle* parking){
+  if (getCount()!=max) {
   vehicles[getCount()] = parking[0];
   counter[0]++;
+  } else {
+    cout << "The lot is full" << endl;
+  }
 }
 
 void ParkingLot::unparkVehicle(int ID){
@@ -36,7 +40,8 @@ void ParkingLot::unparkVehicle(int ID){
     cout << "Vehicle not in the lot" << endl;
   } else {
     for (int i=count2;i<max;i++) {
-      vehicles[i] = vehicles[i+1];
+      Vehicle holder = vehicles[i+1];
+      vehicles[i] = holder;
     }
   }
 }
@@ -46,7 +51,7 @@ void ParkingLot::maxParkingDuration(int seconds) {
 }
 int ParkingLot::countOverstayingVehicles(){
   int overstayed = 0;
-  for (int i=0;i<max;i++) {
+  for (int i=0;i<counter[0];i++) {
     if (vehicles[i].getParkingDuration()>maxduration)
     overstayed++;
   }

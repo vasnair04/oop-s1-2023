@@ -34,7 +34,8 @@ int main(){
       i++;
     }
   }
-
+  Vehicle vehicle = Motorbike(3);
+  carpark.parkVehicle(&vehicle);
   cout << "Please enter ID of vehicle to be removed: " << endl;
   cin >> ID;
   carpark.unparkVehicle(ID);
