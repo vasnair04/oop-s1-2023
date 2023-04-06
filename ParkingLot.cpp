@@ -28,13 +28,14 @@ void ParkingLot::unparkVehicle(int ID){
   int status = 0;
   int count2 = 0;
   Vehicle blank();
-  while (count2<max&&status==0){
+  while (count2<max&&status!=1){
     if (vehicles[count2].get_ID()==ID) {
       vehicles[count2] = 0;
       counter[0]--;
       status = 1;
+    } else {
+      count2++;
     }
-    count2++;
   }
   if (status==0){    
     cout << "Vehicle not in the lot" << endl;
@@ -49,10 +50,10 @@ void ParkingLot::unparkVehicle(int ID){
 void ParkingLot::maxParkingDuration(int seconds) {
   maxduration = seconds;
 }
-int ParkingLot::countOverstayingVehicles(){
+int ParkingLot::countOverstayingVehicles(int maxduration2){
   int overstayed = 0;
   for (int i=0;i<counter[0];i++) {
-    if (vehicles[i].getParkingDuration()>maxduration)
+    if (vehicles[i].getParkingDuration()>maxduration2)
     overstayed++;
   }
   return overstayed;
