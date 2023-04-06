@@ -8,7 +8,7 @@ Car::Car(int ID): Vehicle::Vehicle(ID) {}
 
 int Car::getParkingDuration(){
   int seconds;
-  seconds = time(0) - timeOfEntry - 3;
+  seconds = time(0) - timeOfEntry;
   int seconds_scaled = seconds*0.9;
   return seconds_scaled;
 }
