@@ -15,9 +15,9 @@ int ParkingLot::getCount(){
   return counter[0];
 }
 
-void ParkingLot::parkVehicle(Vehicle parking){
+void ParkingLot::parkVehicle(Vehicle* parking){
   if (getCount()!=max) {
-  vehicles[counter[0]] = parking;
+  vehicles[counter[0]] = parking[0];
   counter[0]++;
   } else {
     cout << "The lot is full" << endl;
