@@ -1,4 +1,5 @@
 #include "Bus.h"
+#include "ParkingLot.h"
 
 Bus::Bus(): Vehicle::Vehicle() {}
 
