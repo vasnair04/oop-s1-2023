@@ -1,13 +1,14 @@
 #include "Vehicle.h"
 #include <iostream>
 
+
 Vehicle::Vehicle() {
-  timeOfEntry = time(0);
+  timeOfEntry = clock();
   ID = 0;
 }
 
 Vehicle::Vehicle(int ID): ID(ID) {
-  timeOfEntry = time(0);
+  timeOfEntry = clock();
 }
 
 int Vehicle::get_ID(){
@@ -15,7 +16,8 @@ int Vehicle::get_ID(){
 }
 
 int Vehicle::getParkingDuration(){
-  return 0;
+  int seconds = clock() - timeOfEntry;
+  return seconds;
 }
 
 Vehicle::~Vehicle(){
