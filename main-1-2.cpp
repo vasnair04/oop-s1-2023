@@ -8,34 +8,36 @@
 using namespace std;
 
 int main(){
-  int num = 0;
-  cout << "How many vehicles would you like to park: " << endl;
-  cin >> num;
-  Vehicle* parking = new Vehicle[num];
+  ParkingLot carpark(10);
   string* current = new string[1];
-  string* type = new string[num];
-  for (int i=0;i<num;i++) {
+  string* type = new string[10];
+  int ID = 0;
+  for (int i=0;i<10;i++) {
     cout << "What vehicle would you like to park?" << endl;
     cin >> current[0];
-    if (current[0]=="car"){
-      parking[i] = Car(i);
-      type[i] = "car";
-    } else if(current[0]=="bus") {
-      parking[i] = Bus(i);
+    cout << "What is the id of this vehicle?" << endl;
+    cin >> ID;
+    if (current[0]=="Car"){
+      Vehicle vehicle = Car(ID);
+      carpark.parkVehicle(&vehicle) ;
+      type[i] = "Car";
+    } else if(current[0]=="Bus") {
+      Vehicle vehicle = Bus(ID);
+      carpark.parkVehicle(&vehicle) ;
       type[i] = "bus";
-    } else if(current[0]=="motorbike") {
-      parking[i] = Motorbike(i);
-      type[i] = "motorbike";
+    } else if(current[0]=="Motorbike") {
+      Vehicle vehicle = Motorbike(ID);
+      carpark.parkVehicle(&vehicle) ;
+      type[i] = "Motorbike";
     } else {
       cout << "invalid input!" << endl;
-      num++;
+      i++;
     }
   }
-  for (int i=0;i<num;i++) {
-    cout << "Vehicle of type " << type[i] << " with ID: " << parking[i].get_ID() << " has been parked for " << parking[i].getParkingDuration() << " seconds" << endl;
-  }
-  delete [] parking;
-  delete [] current;
-  delete [] type;
+
+  cout << "Please enter ID of vehicle to be removed: " << endl;
+  cin >> ID;
+  carpark.unparkVehicle(ID);
+  printf("%d",carpark.getCount());
   return 0;
 }

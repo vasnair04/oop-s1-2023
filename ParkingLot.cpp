@@ -3,8 +3,7 @@
 
 using namespace std;
 
-ParkingLot::ParkingLot(){
-  max = 0;
+ParkingLot::ParkingLot(): max(0) {
   maxduration = 0;
 }
 
