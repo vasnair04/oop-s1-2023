@@ -30,10 +30,10 @@ void ParkingLot::unparkVehicle(int ID){
   Vehicle blank(0);
   while (count2<=max&&status!=1){
     if (vehicles[count2].get_ID()==ID) {
-      vehicles[count2] = 0;
+      vehicles[count2] = blank;
       counter[0]--;
       status = 1;
-    } else {
+    } else { 
       count2++;
     }
   }
@@ -44,7 +44,7 @@ void ParkingLot::unparkVehicle(int ID){
       Vehicle holder = vehicles[i+1];
       vehicles[i] = holder;
     }
-    vehicles[counter[0]+1] = 0;
+    vehicles[counter[0]+1] = blank;
   }
 }
 
