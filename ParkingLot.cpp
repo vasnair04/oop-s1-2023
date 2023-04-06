@@ -44,7 +44,7 @@ void ParkingLot::unparkVehicle(int ID){
       Vehicle holder = vehicles[i+1];
       vehicles[i] = holder;
     }
-    vehicles[counter[0]] = 0;
+    vehicles[counter[0]+1] = 0;
   }
 }
 
@@ -53,7 +53,7 @@ void ParkingLot::maxParkingDuration(int seconds) {
 }
 int ParkingLot::countOverstayingVehicles(int maxduration2){
   int overstayed = 0;
-  for (int i=0;i<counter[0];i++) {
+  for (int i=0;i<max;i++) {
     if (vehicles[i].getParkingDuration()>maxduration2)
     overstayed++;
   }

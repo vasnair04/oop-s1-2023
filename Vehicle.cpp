@@ -15,7 +15,7 @@ int Vehicle::get_ID(){
 }
 
 int Vehicle::getParkingDuration(){
-return 0;
+  return;
 }
 
 Vehicle::~Vehicle(){
