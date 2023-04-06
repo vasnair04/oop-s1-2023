@@ -12,7 +12,7 @@ int main(){
   string* current = new string[1];
   string* type = new string[3];
   int ID = 0;
-  for (int i=0;i<10;i++) {
+  for (int i=0;i<3;i++) {
     cout << "What vehicle would you like to park?" << endl;
     cin >> current[0];
     cout << "What is the id of this vehicle?" << endl;
@@ -34,7 +34,7 @@ int main(){
       i++;
     }
   }
-  carpark2.maxParkingDuration(15);
-  cout << carpark2.countOverstayingVehicles(15) << endl;
+  carpark2.maxParkingDuration(15);  
+  cout << carpark2.countOverstayingVehicles(-1) << endl;
   return 0;
 }
