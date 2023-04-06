@@ -6,7 +6,7 @@ Motorbike::Motorbike(int ID): Vehicle::Vehicle(ID) {}
 
 int Motorbike::getParkingDuration(){
   int seconds;
-  seconds = time(0) - timeOfEntry;
+  seconds = time(NULL) - timeOfEntry;
   seconds = seconds*0.85;
   return seconds;
 }
