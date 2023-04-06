@@ -7,7 +7,7 @@ Bus::Bus(int ID): Vehicle::Vehicle(ID) {}
 
 int Bus::getParkingDuration(){
   int seconds;
-  seconds = difftime(clock(),timeOfEntry);
+  seconds = difftime(time(0),timeOfEntry);
   seconds = (seconds*75)/100;
   return seconds;
 }

@@ -3,12 +3,12 @@
 
 
 Vehicle::Vehicle() {
-  timeOfEntry = clock();
+  timeOfEntry = time(0);
   ID = 0;
 }
 
 Vehicle::Vehicle(int ID): ID(ID) {
-  timeOfEntry = clock();
+  timeOfEntry = time(0);
 }
 
 int Vehicle::get_ID(){
@@ -16,7 +16,7 @@ int Vehicle::get_ID(){
 }
 
 int Vehicle::getParkingDuration(){
-  int seconds = clock() - timeOfEntry;
+  int seconds = time(0) - timeOfEntry;
   return seconds;
 }
 
