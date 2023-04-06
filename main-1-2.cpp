@@ -22,7 +22,7 @@ int main(){
       carpark.parkVehicle(&vehicle) ;
       type[i] = "Car";
     } else if(current[0]=="Bus") {
-      Vehicle vehicle = Bus(ID);
+      Vehicle vehicle = Bus(ID);  
       carpark.parkVehicle(&vehicle) ;
       type[i] = "Bus";
     } else if(current[0]=="Motorbike") {
