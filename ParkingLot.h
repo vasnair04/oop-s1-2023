@@ -11,8 +11,7 @@ class ParkingLot {
   Vehicle* vehicles = new Vehicle[max];
   int maxduration;
   public:
-  int* counter = new int[1];
-  counter[0] = 0;
+  int counter = 0;
   ParkingLot();
   ParkingLot(int max);
   int getCount();

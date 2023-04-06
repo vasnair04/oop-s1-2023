@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-
+ 
 ParkingLot::ParkingLot(): max(0) {
   maxduration = 0;
 }
@@ -12,13 +12,13 @@ ParkingLot::ParkingLot(int max) : max(max){
 }
 
 int ParkingLot::getCount(){
-  return counter[0];
+  return counter;
 }
 
 void ParkingLot::parkVehicle(Vehicle* parking){
   if (getCount()!=max) {
-  vehicles[counter[0]] = parking[0];
-  counter[0]++;
+  vehicles[counter] = parking[0];
+  counter++;
   } else {
     cout << "The lot is full" << endl;
   }
@@ -31,7 +31,7 @@ void ParkingLot::unparkVehicle(int ID){
   while (count2<max&&status!=1){
     if (vehicles[count2].get_ID()==ID) {
       vehicles[count2] = blank;
-      counter[0]--;
+      counter--;
       status = 1;
     } else { 
       count2++;
@@ -40,11 +40,12 @@ void ParkingLot::unparkVehicle(int ID){
   if (status==0){    
     cout << "Vehicle not in the lot" << endl;
   } else {
-    for (int i=count2;i<(max-1);i++) {
+    for (int i=count2;i<max-1;i++) {
       Vehicle holder = vehicles[i+1];
       vehicles[i] = holder;
     }
-    vehicles[counter[0]+1] = blank;
+    int index = counter;
+    vehicles[index+1] = blank;
   }
 }
 
@@ -62,6 +63,5 @@ int ParkingLot::countOverstayingVehicles(int maxParkingDuration){
 
 ParkingLot::~ParkingLot(){
   delete [] vehicles;
-  delete [] counter;
 }
 
