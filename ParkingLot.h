@@ -9,7 +9,6 @@ class ParkingLot {
   protected:
   int max;
   Vehicle* vehicles = new Vehicle[max];
-  int maxduration;
   public:
   int counter = 0;
   ParkingLot();
@@ -17,7 +16,6 @@ class ParkingLot {
   int getCount();
   void parkVehicle(Vehicle* parking);
   void unparkVehicle(int ID); 
-  void maxParkingDuration(int seconds);
   int countOverstayingVehicles(int maxParkingDuration);
   ~ParkingLot();
 };

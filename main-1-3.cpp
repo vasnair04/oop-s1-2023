@@ -34,7 +34,6 @@ int main(){
       i++;
     }
   }
-  carpark2.maxParkingDuration(15);  
   cout << carpark2.countOverstayingVehicles(-1) << endl;
   return 0;
 }

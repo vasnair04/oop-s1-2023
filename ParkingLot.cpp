@@ -3,13 +3,9 @@
 
 using namespace std;
  
-ParkingLot::ParkingLot(): max(0) {
-  maxduration = 0;
-}
+ParkingLot::ParkingLot(): max(0) {}
 
-ParkingLot::ParkingLot(int max) : max(max){
-  maxduration = 0;
-}
+ParkingLot::ParkingLot(int max) : max(max){}
 
 int ParkingLot::getCount(){
   return counter;
@@ -49,9 +45,7 @@ void ParkingLot::unparkVehicle(int ID){
   }
 }
 
-void ParkingLot::maxParkingDuration(int seconds) {
-  maxduration = seconds;
-}
+
 int ParkingLot::countOverstayingVehicles(int maxParkingDuration){
   int overstayed = 0;
   for (int i=0;i<getCount();i++) {
