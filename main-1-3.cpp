@@ -34,6 +34,6 @@ int main(){
       i++;
     }
   }
-  cout << carpark2.countOverstayingVehicles(-1) << endl;
+  cout << carpark2.countOverstayingVehicles(1) << endl;
   return 0;
 }
