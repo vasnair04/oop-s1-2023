@@ -11,7 +11,7 @@ Appliance::Appliance(int powerRting){
   isOn = 0;
 }
 
-double Appliance::getPowerConsumption(){
+double Appliance::get_PowerConsumption(){
   return 0;
 }
 

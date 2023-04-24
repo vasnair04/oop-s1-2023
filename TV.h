@@ -8,9 +8,9 @@ class TV : public Appliance{
   public:
   TV();
   TV(int powerRating, double screenSize);
-  void setScreenSize(double screenSiz);
-  double getScreenSize();
-  double getPowerConsumption(); 
+  void set_ScreenSize(double screenSiz);
+  double get_ScreenSize();
+  double get_PowerConsumption(); 
 };
 
 #endif

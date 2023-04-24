@@ -12,15 +12,15 @@ Fridge::Fridge(int powerRting, double vol){
   isOn = 0;
 }
 
-void Fridge::setVolume(double vol){
+void Fridge::set_Volume(double vol){
   volume = vol;
 }
 
-double Fridge::getVolume(){
+double Fridge::get_Volume(){
   return volume;
 }
 
-double Fridge::getPowerConsumption(){
+double Fridge::get_PowerConsumption(){
   double powercons = 0;
   powercons = powerRating*24*(volume*0.01);
   return powercons;

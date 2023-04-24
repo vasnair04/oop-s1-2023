@@ -8,9 +8,9 @@ class Fridge : public Appliance {
   public:
     Fridge();
     Fridge(int Powerating,double volume);
-    void setVolume(double volume);
-    double getVolume();
-    double getPowerConsumption();
+    void set_Volume(double volume);
+    double get_Volume();
+    double get_PowerConsumption();
 };
 
 #endif

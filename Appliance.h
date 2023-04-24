@@ -10,7 +10,7 @@ class Appliance {
   Appliance(int powerRating);
   void turnOn();
   void turnOff();
-  virtual double getPowerConsumption();
+  virtual double get_PowerConsumption();
 };
 
 #endif
