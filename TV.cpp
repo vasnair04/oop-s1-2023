@@ -16,7 +16,7 @@ void TV::set_ScreenSize(double screenSiz){
   screenSize = screenSiz;
 }
 
-double TV::get_ScreenSize(){
+double TV::getScreenSize(){
   return screenSize;
 }
 
@@ -25,4 +25,3 @@ double TV::get_PowerConsumption(){
   powercons = powerRating*(screenSize*0.1);
   return powercons;
 }
-
