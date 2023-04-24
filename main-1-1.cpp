@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Applicance.h"
+#include "Appliance.h"
 
 int main(){
   Appliance Fr(100);

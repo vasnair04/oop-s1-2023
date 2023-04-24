@@ -1,6 +1,6 @@
 #ifndef TV_H
 #define TV_H
-#include "Applicance.h"
+#include "Appliance.h"
 
 class TV : public Appliance{
   private:

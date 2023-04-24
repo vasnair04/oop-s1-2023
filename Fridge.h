@@ -1,6 +1,6 @@
 #ifndef FRIDGE_H
 #define FRIDGE_H
-#include "Applicance.h"
+#include "Appliance.h"
 
 class Fridge : public Appliance {
   private:
