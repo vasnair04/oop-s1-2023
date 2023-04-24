@@ -23,6 +23,10 @@ void Appliance::turnOff(){
   isOn = 0;
 }
 
+void Appliance::set_powerRating(int power){
+  powerRating = power;
+}
+
 int Appliance::get_powerRating(){
   return powerRating;
 }
