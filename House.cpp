@@ -10,11 +10,11 @@ House::House(int numAppliance){
   appliances = new Appliance*[numAppliances];
 }
 
-double House::get_TotalPowerConsumption(){
+double House::getTotalPowerConsumption(){
   double total = 0;
   double temp = 0;
   for (int i=0;i<numAppliances;i++){
-    temp = appliances[i]->get_PowerConsumption();
+    temp = appliances[i]->getPowerConsumption();
     total = total + temp;
   }
   return total;

@@ -12,11 +12,11 @@ Fridge::Fridge(int powerRting, double vol){
   isOn = 0;
 }
 
-void Fridge::set_Volume(double vol){
+void Fridge::setVolume(double vol){
   volume = vol;
 }
 
-double Fridge::get_Volume(){
+double Fridge::getVolume(){
   return volume;
 }
 

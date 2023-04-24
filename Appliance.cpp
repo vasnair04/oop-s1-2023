@@ -11,7 +11,7 @@ Appliance::Appliance(int powerRting){
   isOn = 0;
 }
 
-double Appliance::get_PowerConsumption(){
+double Appliance::getPowerConsumption(){
   return 0;
 }
 
@@ -23,3 +23,10 @@ void Appliance::turnOff(){
   isOn = 0;
 }
 
+int Appliance::get_powerRating(){
+  return powerRating;
+}
+
+bool Appliance::get_isOn(){
+  return isOn;
+}
