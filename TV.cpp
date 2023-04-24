@@ -12,7 +12,7 @@ TV::TV(int powerRtng,double screenSiz){
   isOn = 0;
 };
 
-void TV::set_ScreenSize(double screenSiz){
+void TV::setScreenSize(double screenSiz){
   screenSize = screenSiz;
 }
 

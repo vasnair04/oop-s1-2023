@@ -29,3 +29,7 @@ bool House::addAppliance(Appliance* appliance){
     return 0;
   }
 }
+
+House::~House(){
+  delete appliances [];
+}

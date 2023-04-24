@@ -13,6 +13,7 @@ class House{
   int globalcount = 0;
   bool addAppliance(Appliance* appliance);
   double getTotalPowerConsumption();  
+  ~House();
 };
 
 
