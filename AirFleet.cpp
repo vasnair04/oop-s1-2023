@@ -1,7 +1,7 @@
 #include "AirFleet.h"
 
 AirFleet::AirFleet(){
-  fleet = new AirCraft*[5];
+  fleet[0] = new AirCraft[5];
   Airplane A1(20,10);
   Helicopter H1(10000, "BlackHawk");
   AirCraft A2(5000);
