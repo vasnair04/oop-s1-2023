@@ -17,7 +17,7 @@ Helicopter::Helicopter(int w,string nam){
 void Helicopter::fly(int headwind, int minutes){
   int holdfuel = fuel;
   float fuelPerMin = 0;
-  if (headwind=>40) {
+  if (headwind>=40) {
     fuelPerMin = fuelPerMin + 0.4;
   } else {
     fuelPerMin = fuelPerMin + 0.2;
