@@ -16,7 +16,7 @@ void AirCraft::refuel(){
   fuel = 100;
 }
 
-void AirCraft::fly(){
+void AirCraft::fly(int headwind, int minutes){
   numberOfFlights++;
 }
 
