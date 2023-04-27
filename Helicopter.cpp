@@ -15,9 +15,7 @@ Helicopter::Helicopter(int w,string nam){
 }
 
 void Helicopter::fly(int headwind, int minutes){
-  if (fuel<20){
-    return;
-  }
+  int holdfuel = fuel;
   float fuelPerMin = 0;
   if (headwind>40) {
     fuelPerMin = fuelPerMin + 0.4;
@@ -32,6 +30,10 @@ void Helicopter::fly(int headwind, int minutes){
     fuel = 0;
   }
   this->numberOfFlights++;
+  if (fuel<20){
+    this->fuel = holdfuel;
+    this->numberOfFlights--;
+  }
 }
 
 string Helicopter::get_name(){

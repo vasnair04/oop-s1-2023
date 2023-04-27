@@ -27,9 +27,7 @@ int Airplane::get_numPassengers(){
 }
 
 void Airplane::fly(int headwind, int minutes){
-  if (fuel<20){
-    return;
-  }
+  int holdfuel = fuel;
   float fuelPerMin = 0;
   if (headwind>60) {
     fuelPerMin = fuelPerMin + 0.5;
@@ -42,6 +40,10 @@ void Airplane::fly(int headwind, int minutes){
     fuel = 0;
   }
   this->numberOfFlights++;
+  if (fuel<20){
+    this->fuel=holdfuel;
+    this->numberOfFlights--;
+  }
 }
 
 void Airplane::set_numPassengers(int p){
